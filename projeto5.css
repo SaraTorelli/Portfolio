@@ -1,0 +1,318 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap');
+
+
+body{
+    margin: 0;
+    padding: 0;
+    font-family: "Montserrat",sans-serif;
+    color: #e7e7ee;
+    background-color:  #21212e;
+    
+
+}
+
+/*HEADER*/
+
+
+
+.header-container {
+    height: 100vh;
+    width: 100vw;
+    background-repeat: no-repeat;
+    background-position: right;
+    background-size: contain;
+    align-items: flex-start;
+    box-sizing: border-box;
+    padding: 0 112px;
+    position: relative;
+}
+
+h1{
+margin-top: 200px;
+    font-size: 50px;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+}
+h2{
+    text-transform: uppercase;
+    letter-spacing: 4px;
+}
+.social-midia{
+    margin-top: 1rem;
+    display: flex;
+}
+.social-midia a{
+   
+    text-decoration: none;
+    color: #e7e7ee;
+    padding: 1rem 4rem;
+    border: 1px solid #e7e7ee;
+    min-width: 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: .5s ease-in-out;
+}
+a:hover{
+    background-color: #d6d4d4;
+
+}
+.checkbox-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.checkbox{
+    height: 100px;
+    width: 100px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 9999;
+    transition: 400ms ease-in-out 0s;
+   
+}
+.checkbox .trace{
+    width: 50px;
+    height: 2px;
+   background-color: #ece0e0;
+    position: absolute;
+    border-radius: 4px;
+    transition: 0.5s ease-in-out;
+}
+.checkbox .trace:nth-child(1){
+    top: 26px;
+    transform: rotate(0);
+  
+
+}
+.checkbox .trace:nth-child(2){
+    top: 46px;
+    transform: rotate(0);
+   
+    
+}
+.checkbox .trace:nth-child(3){
+    top: 66px;
+    transform: rotate(0);
+   
+}
+#toggle{
+    display:none;
+}
+.menu {
+    position: absolute;
+    top: 28px;
+    right: 38px;
+    background-color: transparent;
+    height: 4px;
+    width: 10px;
+    border-radius: 200px;
+    box-shadow: 0px 0px 0px 0px #e7e7ee;
+    z-index: -1;
+    transition: 400ms ease-in-out 0;
+
+
+}
+
+.menu-items{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+    opacity: 0;
+    visibility: hidden;
+    transition: 400ms ease-in-out 0;
+}
+
+.menu-items ul{
+    list-style-type: none;
+
+}
+
+.menu-items ul li a{
+    margin: 10px 0;
+   color: #e178fc;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    font-size: 40px
+}
+
+#toggle:checked +.checkbox .trace:nth-child(1){
+
+    transform: rotate(45deg);
+    top: 47px;
+
+}
+#toggle:checked +.checkbox .trace:nth-child(2){
+transform: translate(-100px);
+width: 30px;
+visibility: hidden;
+opacity: 0;
+}
+#toggle:checked +.checkbox .trace:nth-child(3){
+    transform: rotate(-45deg);
+    top:48px;
+
+}
+
+#toggle:checked + .checkbox{
+    background-color: #4a3364;
+    
+
+}
+
+#toggle:checked ~ .menu{
+box-shadow: 0px 0px 0px 100vmax #4a3364;
+z-index: 1;
+
+}
+
+#toggle:checked ~ .menu-items{
+    visibility: visible;
+    opacity: 1;
+}
+
+h3{
+    font-size: 300%;
+    color: #ebebf3;
+   margin-bottom: 200px;
+    
+
+}
+
+.card-text2{
+    font-size: 200%;
+        color: #e7e7eb;
+        margin-left: 16%;
+    margin-top: 80px;
+     
+}
+
+.container{
+    position: relative;
+
+    }
+
+    .container .wrapper{
+        width: 60vw;
+        height: 75vh;
+        box-shadow:10px 10px 10px rgba(0,0,0,0.6);
+        margin: 5rem auto;
+        overflow: hidden;
+    }
+    .container .wrapper-holder{
+        display: grid;
+        grid-template-columns: repeat(4,100%);
+        height: 100%;
+        width: 100%;
+        animation: slider 30s ease-in-out infinite alternate;
+    }
+    .container #slider-img-1{
+        background-image: url(img/hiagosara.png);
+        background-position:center;
+    }
+    .container #slider-img-2{
+        background-image: url(img/hiagosara.png);
+        background-position:center;
+    }
+    .container #slider-img-3{
+        background-image: url(img/hiagosara.png);
+        background-position:center;
+    }
+    .container #slider-img-4{
+        background-image: url(img/hiagosara.png);
+        background-position:center;
+    }
+    .container .button-holder .button{
+        background-color: aliceblue;
+        width: 15px;
+        height: 15px;
+        border-radius: 15px;
+        display: inline-block;
+        margin: 3rem;
+    }
+    .container .button-holder{
+        position: absolute;
+        left: 30%;
+        bottom: 0%;
+    }
+    @keyframes slider{
+        0%{transform: translateX(0%);}
+        10%{transform: translateX(-100%);}
+        20%{transform: translateX(-100%);}
+        30%{transform: translateX(-200%);}
+        40%{transform: translateX(-200%);}
+        50%{transform: translateX(-200%);}
+        60%{transform: translateX(-300%);}
+        70%{transform: translateX(-300%);}
+        80%{transform: translateX(-300%);}
+        90%{transform: translateX(0%);}
+        100%{transform: translateX(0%);}
+    }
+    .card-text{
+        font-size: 250%;
+        color: #e7e7eb;
+        margin-left: 16%;
+        
+    }
+    
+    
+    .card-text1{
+        font-size: 250%;
+        color: #e7e7eb;
+        margin-left: 16%;
+        margin-bottom: 3%;
+        
+    }
+    .footer{
+        background-color: #1e1e2a;
+        
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    
+    }
+    .social-midia{
+        margin-top: 1rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    margin-bottom: 3%;
+
+    }
+    .social-midia a{
+       
+        text-decoration: none;
+        padding: 1rem 4rem;
+        border: 1px solid #e7e7ee;
+        min-width: 4rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: .5s ease-in-out;
+    }
+    
+    a:hover{
+        background-color: #d6d4d4;
+    
+    }
+    ::-webkit-scrollbar{
+        width: 15px;
+    }
+    ::-webkit-scrollbar-thumb{
+        background-color:#272741 ;
+    }
+    ::-webkit-scrollbar-track{
+        background-color: #535381;
+        width: 50px;
+    }
